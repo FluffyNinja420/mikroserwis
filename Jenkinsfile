@@ -25,7 +25,7 @@ pipeline {
         branch 'master'
       }
       steps {
-        withDockerRegistry(credentialsId: 'dockerbuildbot-index.docker.io', url:'') {
+        withDockerRegistry(credentialsId: 'dockerbuildbot-index.docker.io', url:'https://index.docker.io/v1/') {
           sh 'docker push mikroserwis/result'
         }
       }
@@ -35,7 +35,7 @@ pipeline {
         branch 'master'
       }
       steps {
-        withDockerRegistry(credentialsId: 'dockerbuildbot-index.docker.io', url:'') {
+        withDockerRegistry(credentialsId: 'dockerbuildbot-index.docker.io', url:'https://index.docker.io/v1/') {
           sh 'docker push mikroserwis/vote'
         }
       }
@@ -45,7 +45,7 @@ pipeline {
         branch 'master'
       }
       steps {
-        withDockerRegistry(credentialsId: 'dockerbuildbot-index.docker.io', url:'') {
+        withDockerRegistry(credentialsId: 'dockerbuildbot-index.docker.io', url:'https://index.docker.io/v1/') {
           sh 'docker push mikroserwis/worker'
         }
       }
